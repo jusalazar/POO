@@ -1,9 +1,10 @@
 
-package data;
+package data.Usuarios.Cliente;
 
+import data.Usuarios.SujetoConsultorio;
 import java.util.Date;
 
-public class Usuario extends SujetoConsultorio {
+public class Cliente extends SujetoConsultorio {
     
     //atributos
     Boolean recursosEconomicos;
@@ -24,7 +25,7 @@ public class Usuario extends SujetoConsultorio {
     
     //Constructor
 
-    public Usuario(String nombre, String apellido_1, String apellido_2, Date fechaDeNacimiento,Boolean recursosEconomicos, int estrato, String ocupacion, String tipoDeVinculacionLaboral, Boolean perteneceASisben, String idPersonal, String lugarDeNAcimiento, String estadoCivil, int numContacto, String direccionResidencia, String barrio, String direccionTrabajo, String tipoVivienda, int ingreso, String gradoEscolaridad) {
+    public Cliente(String nombre, String apellido_1, String apellido_2, Date fechaDeNacimiento,Boolean recursosEconomicos, int estrato, String ocupacion, String tipoDeVinculacionLaboral, Boolean perteneceASisben, String idPersonal, String lugarDeNAcimiento, String estadoCivil, int numContacto, String direccionResidencia, String barrio, String direccionTrabajo, String tipoVivienda, int ingreso, String gradoEscolaridad) {
         super(nombre, apellido_1, apellido_2, fechaDeNacimiento);
         this.recursosEconomicos = recursosEconomicos;
         this.estrato = estrato;
