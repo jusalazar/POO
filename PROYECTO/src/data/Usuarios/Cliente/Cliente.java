@@ -7,7 +7,7 @@ import java.util.Date;
 public class Cliente extends SujetoConsultorio {
     
     //atributos
-    Boolean recursosEconomicos;
+    protected Boolean recursosEconomicos;
     int estrato;
     String ocupacion;
     String tipoDeVinculacionLaboral;
