@@ -4,7 +4,7 @@ package data.Usuarios.EmpleadosConslutorio;
 import data.Usuarios.SujetoConsultorio;
 import java.util.Date;
 
-public class AgenteInterno extends SujetoConsultorio {
+public abstract class AgenteInterno extends SujetoConsultorio {
     
     // atributos
     String usuario;
