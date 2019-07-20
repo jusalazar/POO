@@ -23,7 +23,7 @@ public class PaginaPrincipal extends javax.swing.JFrame {
     }
     
     //Son las opciones para escojer si es usuaio nuevo o antiguo
-    String [] TipoUsuario = {"Nuevo","Antiguo"};
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -127,11 +127,23 @@ public class PaginaPrincipal extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         //Cree un option pane con las opciones nuevo o antiguo
+        String [] TipoUsuario = {"Nuevo","Antiguo","Regresar al inicio"};
+        this.setVisible(false);
         int respuesta = JOptionPane.showOptionDialog(this,"Escoje tu tipo de usuario","Tipo de usuario",JOptionPane.YES_NO_CANCEL_OPTION,JOptionPane.QUESTION_MESSAGE,null,TipoUsuario,TipoUsuario[0]);
         if (respuesta == 0){
-        Registro UsuarioNuevo = new Registro();
-        UsuarioNuevo.setVisible(true);
-        this.setVisible(false);
+            Registro UsuarioNuevo = new Registro();
+            UsuarioNuevo.setVisible(true);
+            this.setVisible(false);
+        }
+        if (respuesta == 1){
+            Registro UsuarioNuevo = new Registro();
+            //UsuarioNuevo.setVisible(true); login para usuarios viejos
+            this.setVisible(false);    
+        }
+        if (respuesta == 2){
+            PaginaPrincipal regreso = new PaginaPrincipal();
+            regreso.setVisible(true);
+            this.setVisible(false);
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
