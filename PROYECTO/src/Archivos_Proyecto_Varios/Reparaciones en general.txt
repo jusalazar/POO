@@ -1,0 +1,12 @@
+-Llamar a la clase usuario __ Cliente
+
+-idPersonal int a String (Si supera los 9 digitos tendria que ser log con una String nos evitamos problemas)
+
+-En lugar de EstudiantesCalificacion como atributo no seria mejor meter solo estudiantes y que ellos como atributo 
+poseean una calificacion
+
+- Las consultas simples ademas de ser ya un caso poseen un documento extra?
+
+- el arreglo de String que se llama documentos
+
+-Las fehcas de nacimiento pasaron de ser tipo DATE a String
