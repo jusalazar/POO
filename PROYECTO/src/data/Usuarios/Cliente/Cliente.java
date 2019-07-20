@@ -25,7 +25,7 @@ public class Cliente extends SujetoConsultorio {
     
     //Constructor
 
-    public Cliente(String nombre, String apellido_1, String apellido_2, Date fechaDeNacimiento,Boolean recursosEconomicos, int estrato, String ocupacion, String tipoDeVinculacionLaboral, Boolean perteneceASisben, String idPersonal, String lugarDeNAcimiento, String estadoCivil, int numContacto, String direccionResidencia, String barrio, String direccionTrabajo, String tipoVivienda, int ingreso, String gradoEscolaridad) {
+    public Cliente(String nombre, String apellido_1, String apellido_2, String fechaDeNacimiento,Boolean recursosEconomicos, int estrato, String ocupacion, String tipoDeVinculacionLaboral, Boolean perteneceASisben, String idPersonal, String lugarDeNAcimiento, String estadoCivil, int numContacto, String direccionResidencia, String barrio, String direccionTrabajo, String tipoVivienda, int ingreso, String gradoEscolaridad) {
         super(nombre, apellido_1, apellido_2, fechaDeNacimiento);
         this.recursosEconomicos = recursosEconomicos;
         this.estrato = estrato;
@@ -43,7 +43,7 @@ public class Cliente extends SujetoConsultorio {
         this.ingreso = ingreso;
         this.gradoEscolaridad = gradoEscolaridad;
     }
-    
+
     // Get
 
     public Boolean getRecursosEconomicos() {

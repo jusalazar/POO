@@ -7,7 +7,7 @@ package data.Usuarios.EmpleadosConslutorio;
 
 import data.Papeleo.Caso;
 import java.util.ArrayList;
-import java.util.Date;
+
 
 /**
  *
@@ -19,15 +19,17 @@ public class ConsultorJunior extends AgenteInterno {
     int numeroDeCasos;
     int [] areaCasos;
     ArrayList<Caso> casos;
-    
 
-    public ConsultorJunior(int codigo, int numeroDeCasos, int[] areaCasos, ArrayList<Caso> casos, String nombre, String apellido_1, String apellido_2, Date fechaDeNacimiento, String usuario, String password, String idPersonal, Boolean activo) {
+    public ConsultorJunior(int codigo, int numeroDeCasos, int[] areaCasos, ArrayList<Caso> casos, String nombre, String apellido_1, String apellido_2, String fechaDeNacimiento, String usuario, String password, String idPersonal, Boolean activo) {
         super(nombre, apellido_1, apellido_2, fechaDeNacimiento, usuario, password, idPersonal, activo);
         this.codigo = codigo;
         this.numeroDeCasos = numeroDeCasos;
         this.areaCasos = areaCasos;
         this.casos = casos;
     }
+    
+
+
     
     //GEt
 

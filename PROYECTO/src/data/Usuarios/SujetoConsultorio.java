@@ -5,8 +5,6 @@
  */
 package data.Usuarios;
 
-import java.util.Date;
-
 public abstract class SujetoConsultorio {
     
     // Atributos
@@ -14,11 +12,11 @@ public abstract class SujetoConsultorio {
     String nombre;
     String apellido_1;
     String apellido_2;
-    Date fechaDeNacimiento;
+    String fechaDeNacimiento;
     
     //Constructor
 
-    public SujetoConsultorio(String nombre, String apellido_1, String apellido_2, Date fechaDeNacimiento) {
+    public SujetoConsultorio(String nombre, String apellido_1, String apellido_2, String fechaDeNacimiento) {
         this.nombre = nombre;
         this.apellido_1 = apellido_1;
         this.apellido_2 = apellido_2;
@@ -39,7 +37,7 @@ public abstract class SujetoConsultorio {
         return apellido_2;
     }
 
-    public Date getFechaDeNacimiento() {
+    public String getFechaDeNacimiento() {
         return fechaDeNacimiento;
     }
     
@@ -57,7 +55,7 @@ public abstract class SujetoConsultorio {
         this.apellido_2 = apellido_2;
     }
 
-    public void setFechaDeNacimiento(Date fechaDeNacimiento) {
+    public void setFechaDeNacimiento(String fechaDeNacimiento) {
         this.fechaDeNacimiento = fechaDeNacimiento;
     }
     

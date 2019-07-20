@@ -3,7 +3,6 @@ package data.Usuarios.EmpleadosConslutorio;
 
 import data.Papeleo.Caso;
 import java.util.ArrayList;
-import java.util.Date;
 
 
 public class AbogadoProno extends AgenteInterno {
@@ -13,13 +12,14 @@ public class AbogadoProno extends AgenteInterno {
     int areaCasos;
     ArrayList<Caso> casos;
 
-    public AbogadoProno(String especialidad, int numCasos, int areaCasos, ArrayList<Caso> casos, String nombre, String apellido_1, String apellido_2, Date fechaDeNacimiento, String usuario, String password, String idPersonal, Boolean activo) {
+    public AbogadoProno(String especialidad, int numCasos, int areaCasos, ArrayList<Caso> casos, String nombre, String apellido_1, String apellido_2, String fechaDeNacimiento, String usuario, String password, String idPersonal, Boolean activo) {
         super(nombre, apellido_1, apellido_2, fechaDeNacimiento, usuario, password, idPersonal, activo);
         this.especialidad = especialidad;
         this.numCasos = numCasos;
         this.areaCasos = areaCasos;
         this.casos = casos;
     }
+
     
     //SET
 
