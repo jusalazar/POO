@@ -1,8 +1,8 @@
 
 package data.Usuarios.Cliente;
 
+import BussinesLogic.ConsultorioJ;
 import data.Usuarios.SujetoConsultorio;
-import java.util.Date;
 
 public class Cliente extends SujetoConsultorio {
     
@@ -168,11 +168,38 @@ public class Cliente extends SujetoConsultorio {
         this.gradoEscolaridad = gradoEscolaridad;
     }
     
+    
+    
     /*Funciones
     Ver estado de caso public
     Llenar formulario
     */
 
-
-    
+    @Override
+    public String toString() {
+        
+        ConsultorioJ Objetonuevo = new ConsultorioJ();
+        String recursosE = Objetonuevo.DeBooleanAString(recursosEconomicos);
+        String Sisben = Objetonuevo.DeBooleanAString(perteneceASisben);
+        
+        return "Nombre del cliente "+ nombre + " "+ apellido_1 + " "+ apellido_2+ "\n"+
+                "Fecha de nacimiento " + fechaDeNacimiento + "\n"+
+                "Recusos economicos "+ recursosE +"\n"+
+                "Estrato "+ estrato + "\n"+
+                "Ocupación " + ocupacion +"\n"+
+                "Tipo de vinculación laboral " + tipoDeVinculacionLaboral + "\n"+
+                "SISBEN " + Sisben + "\n" +
+                "Id " + idPersonal + "\n"+
+                "Lugar de nacimiento " + lugarDeNAcimiento + "\n" +
+                "Estado civil " + estadoCivil + "\n"+
+                "Número de contacto " + numContacto + "\n"+
+                "Dirección reidencia " + direccionResidencia + "\n"+
+                "Barrio " + barrio + "\n"+
+                "Dirección trabajo " + direccionTrabajo + "\n"+
+                "Tipo de vivienda " + tipoVivienda + "\n" +
+                "Ingresos " + ingreso + "\n"+
+                "Grado de escolaridad " + gradoEscolaridad + "\n";
+                
+    }
+ 
 }

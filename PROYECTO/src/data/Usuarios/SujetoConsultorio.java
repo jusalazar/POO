@@ -9,10 +9,10 @@ public abstract class SujetoConsultorio {
     
     // Atributos
     
-    String nombre;
-    String apellido_1;
-    String apellido_2;
-    String fechaDeNacimiento;
+    public String nombre;
+    public String apellido_1;
+    public String apellido_2;
+    public String fechaDeNacimiento;
     
     //Constructor
 

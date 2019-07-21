@@ -8,6 +8,7 @@ package GUI.Usuario;
 import GUI.Inicial.PaginaPrincipal;
 import javax.swing.JOptionPane;
 import BussinesLogic.*;
+import data.Usuarios.Cliente.Cliente;
 
 /**
  *
@@ -33,7 +34,7 @@ public class Registro extends javax.swing.JFrame {
 
         jPanel4 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        Nombre = new javax.swing.JTextField();
+        Nombret = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         Apellido1 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
@@ -113,7 +114,7 @@ public class Registro extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Nombret, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -148,7 +149,7 @@ public class Registro extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Nombret, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
                     .addComponent(Apellido1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4)
@@ -407,9 +408,9 @@ public class Registro extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String [] atributosUsuario = new String[18]; 
-        
-        atributosUsuario[0] = Nombre.getText();
+        String atributosUsuario [] = new String [19]; //Creamos el arreglo que va a contener los valores de los atributos de nuetro nuevo usuario
+        //Llenamos el arreglo con los datos del jframe
+        atributosUsuario[0] = Nombret.getText();
         atributosUsuario[1] = Apellido1.getText();
         atributosUsuario[2] = Apellido2.getText();
         
@@ -417,11 +418,30 @@ public class Registro extends javax.swing.JFrame {
         String dia = Dia.getSelectedItem().toString();
         String Mes = Meses.getSelectedItem().toString();
         String Año = Años.getSelectedItem().toString();
-        ConsultorioJ FechaCumpleaños = new ConsultorioJ(); // CReamos un objeto para poder llamar a la funcion FechaDeCumpleaños
+        // terminamos el feliz cumpleaños
         
-        atributosUsuario[3]= FechaCumpleaños.FechaDeNacimiento(dia,Mes,Año);
-        System.out.println(atributosUsuario[3]);
+        //atributosUsuario[3] es el unico que no se llena directamente si no en la funcion
+        atributosUsuario[4] = RecusosEconomicos.getSelectedItem().toString();
+        atributosUsuario[5] = EstratoSocioEconomico.getSelectedItem().toString();
+        atributosUsuario[6] = Ocupacion.getText();
+        atributosUsuario[7] = TipoVinLaboral.getText();
+        atributosUsuario[8] = SISBEN.getSelectedItem().toString();
+        atributosUsuario[9] = Id.getText();
+        atributosUsuario[10] = LugNacimiento.getText();
+        atributosUsuario[11] = EstadoCivil.getText();
+        atributosUsuario[12] = NumContacto.getText();
+        atributosUsuario[13] = Residencia.getText();
+        atributosUsuario[14] = Barrio.getText();
+        atributosUsuario[15] = DirTrabajo.getText();
+        atributosUsuario[16] = TipoVivienda.getText();
+        atributosUsuario[17] = Ingreso.getText();
+        atributosUsuario[18] = GradoEscolaridad.getText();
+        //Terminamos de llenar el arreglo
         
+        ConsultorioJ Objetonuevo = new ConsultorioJ();// CReamos un objeto para poder llamar a las funciones de la clase ConsultorioJ
+        Cliente usuarios [] = new Cliente [19];
+        usuarios[0] = Objetonuevo.CrearCliente(atributosUsuario, dia, Mes, Año);
+        System.out.println(usuarios[0].toString());
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -474,7 +494,7 @@ public class Registro extends javax.swing.JFrame {
     private javax.swing.JTextField Ingreso;
     private javax.swing.JTextField LugNacimiento;
     private javax.swing.JComboBox<String> Meses;
-    private javax.swing.JTextField Nombre;
+    private javax.swing.JTextField Nombret;
     private javax.swing.JTextField NumContacto;
     private javax.swing.JTextField Ocupacion;
     private javax.swing.JComboBox<String> RecusosEconomicos;
