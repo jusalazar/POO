@@ -15,7 +15,7 @@ public class Cliente extends SujetoConsultorio {
     String idPersonal;
     String lugarDeNAcimiento;
     String estadoCivil;
-    int numContacto;
+    String numContacto;
     String direccionResidencia;
     String barrio;
     String direccionTrabajo;
@@ -25,7 +25,7 @@ public class Cliente extends SujetoConsultorio {
     
     //Constructor
 
-    public Cliente(String nombre, String apellido_1, String apellido_2, String fechaDeNacimiento,Boolean recursosEconomicos, int estrato, String ocupacion, String tipoDeVinculacionLaboral, Boolean perteneceASisben, String idPersonal, String lugarDeNAcimiento, String estadoCivil, int numContacto, String direccionResidencia, String barrio, String direccionTrabajo, String tipoVivienda, int ingreso, String gradoEscolaridad) {
+    public Cliente(String nombre, String apellido_1, String apellido_2, String fechaDeNacimiento,Boolean recursosEconomicos, int estrato, String ocupacion, String tipoDeVinculacionLaboral, Boolean perteneceASisben, String idPersonal, String lugarDeNAcimiento, String estadoCivil, String numContacto, String direccionResidencia, String barrio, String direccionTrabajo, String tipoVivienda, int ingreso, String gradoEscolaridad) {
         super(nombre, apellido_1, apellido_2, fechaDeNacimiento);
         this.recursosEconomicos = recursosEconomicos;
         this.estrato = estrato;
@@ -78,7 +78,7 @@ public class Cliente extends SujetoConsultorio {
         return estadoCivil;
     }
 
-    public int getNumContacto() {
+    public String getNumContacto() {
         return numContacto;
     }
 
@@ -140,7 +140,7 @@ public class Cliente extends SujetoConsultorio {
         this.estadoCivil = estadoCivil;
     }
 
-    public void setNumContacto(int numContacto) {
+    public void setNumContacto(String numContacto) {
         this.numContacto = numContacto;
     }
 
@@ -202,4 +202,27 @@ public class Cliente extends SujetoConsultorio {
                 
     }
  
+    public String CadenaDeClienteParaArchivo(){
+        ConsultorioJ Objetonuevo = new ConsultorioJ();
+        String recursosE = Objetonuevo.DeBooleanAString(recursosEconomicos);
+        String Sisben = Objetonuevo.DeBooleanAString(perteneceASisben);
+        
+        return  nombre +","+ apellido_1 +","+ apellido_2+","+
+                fechaDeNacimiento + ","+
+                recursosE +","+
+                estrato + ","+
+                ocupacion +","+
+                tipoDeVinculacionLaboral +","+
+                Sisben + ","+
+                idPersonal + ","+
+                lugarDeNAcimiento + "," +
+                estadoCivil + ","+
+                numContacto + ","+
+                direccionResidencia + ","+
+                barrio + ","+
+                direccionTrabajo + ","+
+                tipoVivienda + "," +
+                ingreso + ","+
+                gradoEscolaridad + "\n";
+    }
 }
