@@ -20,12 +20,12 @@ public class Cliente extends SujetoConsultorio {
     String barrio;
     String direccionTrabajo;
     String tipoVivienda;
-    int ingreso;
+    String ingreso;
     String gradoEscolaridad;
     
     //Constructor
 
-    public Cliente(String nombre, String apellido_1, String apellido_2, String fechaDeNacimiento,Boolean recursosEconomicos, int estrato, String ocupacion, String tipoDeVinculacionLaboral, Boolean perteneceASisben, String idPersonal, String lugarDeNAcimiento, String estadoCivil, String numContacto, String direccionResidencia, String barrio, String direccionTrabajo, String tipoVivienda, int ingreso, String gradoEscolaridad) {
+    public Cliente(String nombre, String apellido_1, String apellido_2, String fechaDeNacimiento,Boolean recursosEconomicos, int estrato, String ocupacion, String tipoDeVinculacionLaboral, Boolean perteneceASisben, String idPersonal, String lugarDeNAcimiento, String estadoCivil, String numContacto, String direccionResidencia, String barrio, String direccionTrabajo, String tipoVivienda, String ingreso, String gradoEscolaridad) {
         super(nombre, apellido_1, apellido_2, fechaDeNacimiento);
         this.recursosEconomicos = recursosEconomicos;
         this.estrato = estrato;
@@ -98,7 +98,7 @@ public class Cliente extends SujetoConsultorio {
         return tipoVivienda;
     }
 
-    public int getIngreso() {
+    public String getIngreso() {
         return ingreso;
     }
 
@@ -160,7 +160,7 @@ public class Cliente extends SujetoConsultorio {
         this.tipoVivienda = tipoVivienda;
     }
 
-    public void setIngreso(int ingreso) {
+    public void setIngreso(String ingreso) {
         this.ingreso = ingreso;
     }
 

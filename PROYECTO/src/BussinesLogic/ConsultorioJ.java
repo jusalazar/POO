@@ -40,13 +40,11 @@ public class ConsultorioJ {
         aCliente[3] = FechaDeNacimiento(Dia,Mes,Año);
         Boolean RecusosEconomicos = DesplegableSiNoParaCadena(aCliente[4]);
         int Estrato = Integer.parseInt(aCliente[5]);
-        Boolean Sisben = DesplegableSiNoParaCadena(aCliente[8]); 
-        int Ingresos = Integer.parseInt(aCliente[17]);
-              
+        Boolean Sisben = DesplegableSiNoParaCadena(aCliente[8]);              
         Cliente nuevoCliente = new Cliente(aCliente[0],aCliente[1],aCliente[2],aCliente[3],
         RecusosEconomicos,Estrato,aCliente[6],aCliente[7],Sisben,aCliente[9],aCliente[10],
         aCliente[11],aCliente[12],aCliente[13],aCliente[14],aCliente[15],aCliente[16],
-        Ingresos,aCliente[18]);
+        aCliente[17],aCliente[18]);
         
         return nuevoCliente;       
     }
