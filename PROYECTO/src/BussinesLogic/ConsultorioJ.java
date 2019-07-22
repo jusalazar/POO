@@ -11,6 +11,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
+
+ /*public String ExepcionCadenaEnBlanco(int a,String [] atributosUsuario,String entrada){
+        
+        if(entrada != ""){
+        return atributosUsuario[a] = entrada;
+        }else{
+            return atributosUsuario[a] = "información desconocida";
+        }  
+    }*/
+
 public class ConsultorioJ {
     
     public static Boolean DesplegableSiNoParaCadena(String MenuSiNo){
@@ -69,19 +79,10 @@ public class ConsultorioJ {
         return nuevoCliente;
     }
     
-    public String ExepcionCadenaEnBlanco(int a,String [] atributosUsuario,String entrada){
-        
-        if(entrada != ""){
-        return atributosUsuario[a] = entrada;
-        }else{
-            return atributosUsuario[a] = "información desconocida";
-        }  
-    }
-    
     public void GuardarCliente (Cliente clienteAGuardar){
         FileWriter flwriter = null;
 		try {
-			flwriter = new FileWriter("Clientes.txt",true);
+			flwriter = new FileWriter("1Clientes.txt",true);
 			BufferedWriter bfwriter = new BufferedWriter(flwriter);
                         String CadenaAGuardar = clienteAGuardar.CadenaDeClienteParaArchivo();
                         bfwriter.write(CadenaAGuardar);
@@ -102,7 +103,7 @@ public class ConsultorioJ {
     public static void LeerTodosLosContactos (ArrayList<Cliente> ListaClientes){
        FileReader lectorDeArchivo = null; // Lector de archivo de texto
        try{ // Va a intentar encontrar el archivo en el que leera los contactos
-            lectorDeArchivo = new FileReader("Clientes.txt");
+            lectorDeArchivo = new FileReader("1Clientes.txt");
         }catch(FileNotFoundException error){
             JOptionPane.showMessageDialog(null, error);
         }
@@ -130,8 +131,7 @@ public class ConsultorioJ {
                 
         } 
     }
-    
-    
+
     public static void imprimirarregloClientes (ArrayList<Cliente> ListaClientes){
         for (int i = 0; i < ListaClientes.size(); i++) {
             System.out.println("-----------------------------------------");

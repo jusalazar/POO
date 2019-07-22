@@ -6,6 +6,7 @@
 package GUI.Inicial;
 
 
+import GUI.Usuario.LoginUsuario;
 import GUI.Usuario.Registro1;
 import javax.swing.JOptionPane;
 
@@ -61,6 +62,11 @@ public class PaginaPrincipal extends javax.swing.JFrame {
         });
 
         jButton3.setText("Iniciar sesión");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -127,8 +133,8 @@ public class PaginaPrincipal extends javax.swing.JFrame {
             this.setVisible(false);
         }
         if (respuesta == 1){
-            Registro1 UsuarioNuevo = new Registro1();
-            //UsuarioNuevo.setVisible(true); login para usuarios viejos
+            LoginUsuario UsuarioAntiguo = new LoginUsuario();
+            UsuarioAntiguo.setVisible(true);
             this.setVisible(false);    
         }
         if (respuesta == 2){
@@ -137,6 +143,13 @@ public class PaginaPrincipal extends javax.swing.JFrame {
             this.setVisible(false);
         }
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        EscojerInicioDeSesion multiLogin = new EscojerInicioDeSesion();
+        this.setVisible(false);
+        multiLogin.setLocationRelativeTo(null);
+        multiLogin.setVisible(true);       
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments

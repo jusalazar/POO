@@ -5,6 +5,11 @@
  */
 package GUI.Usuario;
 
+import BussinesLogic.ConsultorioJ;
+import data.Usuarios.Cliente.Cliente;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author mauri
@@ -30,8 +35,8 @@ public class LoginUsuario extends javax.swing.JFrame {
 
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jToggleButton1 = new javax.swing.JToggleButton();
+        idIngreso = new javax.swing.JTextField();
+        botonDeIngreso = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Inicio de Sesión");
@@ -39,11 +44,16 @@ public class LoginUsuario extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Documento de identidad");
 
-        jToggleButton1.setText("Ingresar");
+        botonDeIngreso.setText("Ingresar");
+        botonDeIngreso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonDeIngresoActionPerformed(evt);
+            }
+        });
 
         jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jTextField1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jToggleButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(idIngreso, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(botonDeIngreso, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
@@ -54,8 +64,8 @@ public class LoginUsuario extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jToggleButton1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(botonDeIngreso)
+                    .addComponent(idIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jDesktopPane1Layout.setVerticalGroup(
@@ -64,9 +74,9 @@ public class LoginUsuario extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(idIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jToggleButton1)
+                .addComponent(botonDeIngreso)
                 .addContainerGap())
         );
 
@@ -83,6 +93,26 @@ public class LoginUsuario extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botonDeIngresoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonDeIngresoActionPerformed
+        ConsultorioJ LlamarMetodos = new ConsultorioJ();
+        ArrayList listaCliente = new ArrayList<>();
+        LlamarMetodos.LeerTodosLosContactos(listaCliente);
+        for (int i = 0;i < listaCliente.size(); i++) {
+            Cliente nuevo = (Cliente) listaCliente.get(i);
+            String IdPersonal = nuevo.getIdPersonal();
+            if (IdPersonal.equals(idIngreso.getText())) {
+                this.setVisible(false);
+                String [] Confirmacion = {"Aceptar"};
+                int respuesta = JOptionPane.showOptionDialog(this,"Bienvenido "+nuevo.getNombre(),"Ingreso exitoso",JOptionPane.YES_NO_CANCEL_OPTION,JOptionPane.INFORMATION_MESSAGE,null,Confirmacion,Confirmacion[0]);
+                if (respuesta == 0){
+                    /*LoginUsuario IniciaConLogin = new LoginUsuario();
+                    IniciaConLogin.setVisible(true);
+                    IniciaConLogin.setLocationRelativeTo(null); */
+                }
+            }
+        }
+    }//GEN-LAST:event_botonDeIngresoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -121,9 +151,9 @@ public class LoginUsuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton botonDeIngreso;
+    private javax.swing.JTextField idIngreso;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
 }
