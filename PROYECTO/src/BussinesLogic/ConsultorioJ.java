@@ -81,7 +81,8 @@ public class ConsultorioJ {
     
     public void GuardarCliente (Cliente clienteAGuardar){
         FileWriter flwriter = null;
-		try {
+		try {   
+                        String directorioActual = System.getProperty("user.dir");
 			flwriter = new FileWriter("1Clientes.txt",true);
 			BufferedWriter bfwriter = new BufferedWriter(flwriter);
                         String CadenaAGuardar = clienteAGuardar.CadenaDeClienteParaArchivo();
@@ -145,6 +146,9 @@ public class ConsultorioJ {
         ArrayList listaClientes = new ArrayList<>();
         LeerTodosLosContactos(listaClientes);
         imprimirarregloClientes(listaClientes);
+        String directorio = System.getProperty("user.dir");
+        System.out.println(directorio); 
+        
         
     }
     
