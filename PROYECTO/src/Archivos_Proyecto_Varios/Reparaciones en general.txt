@@ -10,3 +10,9 @@ poseean una calificacion
 - el arreglo de String que se llama documentos
 
 -Las fehcas de nacimiento pasaron de ser tipo DATE a String
+
+-Quitar el correo de la clase formulario
+
+-Quitar rama de derecho en la clase formulario
+
+-Agregar a la clase formulario ún bollean de rechazado o no
