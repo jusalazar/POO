@@ -455,7 +455,7 @@ public class Registro1 extends javax.swing.JFrame {
         atributosUsuario[18] = GradoEscolaridad.getText();
         //Terminamos de llenar el arreglo
         ConsultorioJ Objetonuevo = new ConsultorioJ();// CReamos un objeto para poder llamar a las funciones de la clase ConsultorioJ 
-        Objetonuevo.GuardarCliente(Objetonuevo.CrearCliente(atributosUsuario, dia, Mes, Año));
+        Objetonuevo.GuardarCliente(Objetonuevo.CrearClienteRegistro(atributosUsuario, dia, Mes, Año));
         this.setVisible(false);
         String [] TipoUsuario = {"Aceptar"};
         int respuesta = JOptionPane.showOptionDialog(this,"El usuario ha sido registrado exitosamente","Registro Usuario",JOptionPane.YES_NO_CANCEL_OPTION,JOptionPane.QUESTION_MESSAGE,null,TipoUsuario,TipoUsuario[0]);
