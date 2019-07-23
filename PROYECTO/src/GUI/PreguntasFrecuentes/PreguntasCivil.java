@@ -5,6 +5,8 @@
  */
 package GUI.PreguntasFrecuentes;
 
+import static BussinesLogic.ConsultorioJ.InterpreteArchivosPreguntas;
+
 /**
  *
  * @author mauri
@@ -35,7 +37,7 @@ public class PreguntasCivil extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        areaT = new javax.swing.JTextArea();
 
         jRadioButton1.setText("jRadioButton1");
 
@@ -53,11 +55,15 @@ public class PreguntasCivil extends javax.swing.JFrame {
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hay alguna norma que regule el horario de uso de apps de mensajería, hay pagos de horas extras por la tarea solicitada a través de ese medio" }));
 
         jButton1.setText("CONSULTAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("El arrendatario no puede ceder el arriendo\nni de subarrendar, a menos que medie \nautorización expresa del arrendador.  \nEl arrendador que no haya autorizado podrá \nexigir la entrega del inmueble, dejar sin efectos\nel contrato suscrito con el arrendador que \nsubarrendó y celebrar un nuevo contrato.");
-        jScrollPane1.setViewportView(jTextArea1);
+        areaT.setColumns(20);
+        areaT.setRows(5);
+        jScrollPane1.setViewportView(areaT);
 
         jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -129,6 +135,13 @@ public class PreguntasCivil extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String direccion = "Salud - Qué  regímenes garantizan el disfrute del derecho a la salud.txt";
+        String texto = InterpreteArchivosPreguntas(direccion);
+        System.out.println(texto);
+        areaT.setText(texto);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -165,6 +178,7 @@ public class PreguntasCivil extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea areaT;
     private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JDesktopPane jDesktopPane1;
@@ -173,6 +187,5 @@ public class PreguntasCivil extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }

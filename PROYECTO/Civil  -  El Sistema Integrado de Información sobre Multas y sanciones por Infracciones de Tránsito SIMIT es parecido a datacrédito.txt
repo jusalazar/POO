@@ -1,2 +1,0 @@
-¿El Sistema Integrado de Información sobre Multas y sanciones por Infracciones de Tránsito SIMIT es parecido a datacrédito ?
- Esta es una herramienta en la que se hace un registro de la información de  distintos organismos de tránsito sobre los comparendos o resoluciones emitidas y que, si no está a paz y salvo, impide que se realice cualquier trámite ante los organismos de tránsito del país.

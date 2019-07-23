@@ -97,7 +97,7 @@ public class LoginUsuario extends javax.swing.JFrame {
     private void botonDeIngresoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonDeIngresoActionPerformed
         ConsultorioJ LlamarMetodos = new ConsultorioJ();
         ArrayList listaCliente = new ArrayList<>();
-        LlamarMetodos.LeerTodosLosContactos(listaCliente);
+        LlamarMetodos.LeerTodosLosClientes(listaCliente);
         for (int i = 0;i < listaCliente.size(); i++) {
             Cliente nuevo = (Cliente) listaCliente.get(i);
             String IdPersonal = nuevo.getIdPersonal();

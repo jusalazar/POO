@@ -23,6 +23,8 @@ import javax.swing.JOptionPane;
 
 public class ConsultorioJ {
     
+    //Para el archivo Cliente.txt
+    
     public static Boolean DesplegableSiNoParaCadena(String MenuSiNo){
         Boolean respuesta = null;
         if (MenuSiNo.equals("Si")){
@@ -101,7 +103,7 @@ public class ConsultorioJ {
 		}
     }
     
-    public static void LeerTodosLosContactos (ArrayList<Cliente> ListaClientes){
+    public static void LeerTodosLosClientes (ArrayList<Cliente> ListaClientes){
        FileReader lectorDeArchivo = null; // Lector de archivo de texto
        try{ // Va a intentar encontrar el archivo en el que leera los contactos
             lectorDeArchivo = new FileReader("1Clientes.txt");
@@ -141,14 +143,43 @@ public class ConsultorioJ {
         }
     }
     
+    // Interprete para los arhivos de las preguntas frecuentes
+    
+    public static String InterpreteArchivosPreguntas(String direccionDelArchivo){
+        
+        String texto = "";
+        
+        try{
+            FileReader fl = new FileReader(direccionDelArchivo);
+            BufferedReader bf = new BufferedReader(fl);
+            String acumuladora = "";
+            String bfRead;
+            
+            while((bfRead = bf.readLine()) != null){
+                
+                if (bfRead.equals("$")) {
+                    bfRead = "\n";
+                }
+                if (bfRead.equals("#")) {
+                    bfRead = "  ";
+                }
+                acumuladora = acumuladora + bfRead;
+            }
+            texto = acumuladora;
+        
+        }catch (Exception ex) {
+            System.err.println("No se encontro archivo");
+            texto = "no se encontro archivo";
+        }
+        return texto;   
+    }
+
     public static void main(String[] args) {
         
-        ArrayList listaClientes = new ArrayList<>();
-        LeerTodosLosContactos(listaClientes);
-        imprimirarregloClientes(listaClientes);
-        String directorio = System.getProperty("user.dir");
-        System.out.println(directorio); 
-        
+        String direccion = "Salud - Qué  regímenes garantizan el disfrute del derecho a la salud.txt";
+        String texto = InterpreteArchivosPreguntas(direccion);
+        System.out.println(texto);
+ 
         
     }
     
