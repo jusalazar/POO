@@ -1,0 +1,21 @@
+$
+1.Las personas clasificadas en los niveles 1 y 2 del SISBEN. En este caso pueden acceder a través de un subsidio total,
+$
+#
+sin costo, al conjunto básico de servicios de atención en salud del Plan Obligatorio de Salud del Régimen Subsidiado POS-S.
+$
+#
+2.Si son residentes en el área urbana y están clasificadas en los niveles 2 y 3 del SISBEN, pueden acceder a través de un
+$
+#
+subsidio parcial, pagando una mínima cantidad. El subsidio significa que como beneficiarios solo asumen una mínima parte
+$
+#
+del costo del servicio. El resto es cubierto por el Estado.
+$
+#
+3.La afiliación al Régimen Subsidiado es individual; por ello se debe buscar que todos los miembros de la familia sean
+$
+#
+afiliados.
+$

@@ -1,0 +1,24 @@
+$
+Con la nueva normatividad, se debe advertir que los términos POS y NO POS, dejaron de existir y fueron reemplazos por el
+$
+PBS; así pues, ha de hacerse una delimitación en relación con su cobertura, ya que es de 3 tipos:
+$
+# 
+a) inclusión explicita de medicamentos, insumos o procedimientos, que es aquella que se menciona en la resolución que
+$
+#
+contiene el Plan de Beneficios financiadas con cargo a la Unidad de Pago por Capitación (UPC), si es del régimen
+$
+#
+contributivo o a la Unidad de Pago por Capitación subsidiado (UPC-S) si es del régimen subsidiado; 
+b) inclusión implícita, que recoge los medicamentos, insumos o procedimientos que no se mencionan dentro del PBS pero
+$
+#
+tampoco se excluyen expresamente, y que en el régimen contributivo se soportan económicamente con cargo al ADRES, o en el
+$
+#
+régimen subsidiado se respaldan con cargo a los recursos del ente territorial; y
+$
+#
+c) las expresamente excluidas en la Resolución 5267 de 2017, hoy, Resolución 244 de 2019
+&
