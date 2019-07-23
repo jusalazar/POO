@@ -1,0 +1,7 @@
+$
+Esta es una herramienta en la que se hace un registro de la informacion de  distintos organismos de
+$
+transito sobre los comparendos o resoluciones emitidas y que, si no esta a paz y salvo, impide que se
+$
+realice cualquier tramite ante los organismos de transito del país.
+$
