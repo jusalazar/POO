@@ -176,9 +176,10 @@ public class ConsultorioJ {
 
     public static void main(String[] args) {
         
-        String direccion = "Salud - Qué  regímenes garantizan el disfrute del derecho a la salud.txt";
+        String direccion = "Quien tiene derecho a los alimentos.txt";
         String texto = InterpreteArchivosPreguntas(direccion);
         System.out.println(texto);
+        //System.out.println( "¡Hola pap\u00e1!\nYa puedo escribir bien.\n\u00d1a\u00f1a\u00f1a\u00f1a" );
  
         
     }
