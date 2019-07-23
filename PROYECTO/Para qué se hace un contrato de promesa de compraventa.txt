@@ -1,11 +1,13 @@
 $
-El contrato de promesa de compraventa se hace para garantizar que el negocio 
+El contrato de promesa de compraventa se hace para garantizar 
 $
-prometido sea cumplido por las partes, puede ser sobre bienes inmuebles o muebles. 
+que el negocio prometido sea cumplido por las partes, puede ser 
 $
-Puede mejorarse cuando se agregan arras y una cláusula penal, que son sanciones 
+sobre bienes inmuebles o muebles. Puede mejorarse cuando se agregan 
 $
-económicas y previsión del daño por incumplimiento en el contrato, ello incrementa
+arras y una cláusula penal, que son sanciones económicas y previsión 
 $
-el costo de incumplir.
+del daño por incumplimiento en el contrato, ello incrementa el costo 
+$
+de incumplir.
 $

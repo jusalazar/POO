@@ -7,9 +7,9 @@ import BussinesLogic.*;
 import data.Usuarios.Cliente.Cliente;
 
 
-public class Registro1 extends javax.swing.JFrame {
+public class RegistroMenuPrin extends javax.swing.JFrame {
 
-    public Registro1() {
+    public RegistroMenuPrin() {
         initComponents();
         setLocationRelativeTo(null);
     }
@@ -404,23 +404,8 @@ public class Registro1 extends javax.swing.JFrame {
     
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         this.setVisible(false);
-        String [] TipoUsuario = {"Nuevo","Antiguo","Regresar al inicio"};
-        int respuesta = JOptionPane.showOptionDialog(this,"Escoje tu tipo de usuario","Tipo de usuario",JOptionPane.YES_NO_CANCEL_OPTION,JOptionPane.QUESTION_MESSAGE,null,TipoUsuario,TipoUsuario[0]);
-        if (respuesta == 0){
-            Registro1 UsuarioNuevo = new Registro1();
-            UsuarioNuevo.setVisible(true);
-            this.setVisible(false);
-        }
-        if (respuesta == 1){
-            Registro1 UsuarioNuevo = new Registro1();
-            //UsuarioNuevo.setVisible(true); login para usuarios viejos
-            this.setVisible(false);    
-        }
-        if (respuesta == 2){
-            this.setVisible(false);
-            PaginaPrincipal regreso = new PaginaPrincipal();
-            regreso.setVisible(true);
-        }
+        PaginaPrincipal regreso = new PaginaPrincipal();
+        regreso.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -467,7 +452,7 @@ public class Registro1 extends javax.swing.JFrame {
         }
         }catch (Exception e) {
             this.setVisible(false);
-            Registro1 RegistroErroneo = new Registro1();
+            RegistroMenuPrin RegistroErroneo = new RegistroMenuPrin();
             RegistroErroneo.setVisible(true);
             RegistroErroneo.setLocationRelativeTo(null);
             JOptionPane.showMessageDialog(null,"Por favor ingrese los datos adecuadamente","Registro Usuario Nuevo erroneo", JOptionPane.INFORMATION_MESSAGE);
@@ -492,21 +477,23 @@ public class Registro1 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Registro1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegistroMenuPrin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Registro1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegistroMenuPrin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Registro1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegistroMenuPrin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Registro1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegistroMenuPrin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Registro1().setVisible(true);
+                new RegistroMenuPrin().setVisible(true);
             }
         });
     }

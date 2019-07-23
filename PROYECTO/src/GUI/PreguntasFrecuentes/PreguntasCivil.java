@@ -6,6 +6,7 @@
 package GUI.PreguntasFrecuentes;
 
 import static BussinesLogic.ConsultorioJ.InterpreteArchivosPreguntas;
+import GUI.Inicial.PaginaPrincipal;
 
 /**
  *
@@ -38,6 +39,7 @@ public class PreguntasCivil extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         areaT = new javax.swing.JTextArea();
+        jButton2 = new javax.swing.JButton();
 
         jRadioButton1.setText("jRadioButton1");
 
@@ -53,11 +55,6 @@ public class PreguntasCivil extends javax.swing.JFrame {
         jLabel3.setText("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 
         seleccion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "¿Como cobrar una letra de cambio?", "¿Como limpiar registro de datacredito?", "¿Como me puedo acoger a la ley de insolvencia?", "¿Como puede darse por terminado un contrato de arriendo de vivienda urbana?", "¿Como se levanta una hipoteca?", "¿Cuanto dura el contrato de arrendamiento de vivienda urbana?", "¿El contrato de arrendamiento de vivienda urbana puede ser verbal?", "¿Sistema Integrado de Informacion sobre Multas y sanciones por Infracciones de Transito SIMIT es parecido a datacredito?", "¿Es posible llegar a un acuerdo de pago con datacredito?", "¿La promesa de compraventa deriva posesion o en tenencia?", "¿Me pueden embargar mi salario si soy codeudor de una persona?", "¿Para qué se hace un contrato de promesa de compraventa?", "¿Que es un arrendamiento de vivienda Urbana?", "¿Que garantias se pueden constituir en  un contrato de arrendamiento?", "¿Que hacer cuando se incumple un contrato de promesa de compraventa?", "¿Que obligaciones tiene el arrendador?", "¿Que obligaciones tiene el arrendatario?", "¿Que puedo hacer para proteger un bien inmueble?", "¿Que requisitos se necesita para poder hacer un contraato de promesa de compraventa?", "¿Que son las Garantías?", "¿Se puede embargar la pension para el pago de deudas?", "¿Se puede negociar una deuda de administracion en propiedad horizontal?", "¿Se puede subarrendar o ceder el inmueble objeto del contrato de arrendamiento de vivienda urbana?" }));
-        seleccion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                seleccionActionPerformed(evt);
-            }
-        });
 
         jButton1.setText("CONSULTAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -75,12 +72,20 @@ public class PreguntasCivil extends javax.swing.JFrame {
         areaT.setDragEnabled(true);
         jScrollPane1.setViewportView(areaT);
 
+        jButton2.setText("Regresar al menu anterior");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(seleccion, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(jButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
@@ -102,8 +107,10 @@ public class PreguntasCivil extends javax.swing.JFrame {
                     .addComponent(jScrollPane1))
                 .addContainerGap())
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addGap(316, 316, 316)
+                .addGap(220, 220, 220)
                 .addComponent(jButton1)
+                .addGap(66, 66, 66)
+                .addComponent(jButton2)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jDesktopPane1Layout.setVerticalGroup(
@@ -118,8 +125,10 @@ public class PreguntasCivil extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(seleccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addGap(18, 18, 18)
+                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 284, Short.MAX_VALUE)
                 .addContainerGap())
         );
@@ -151,9 +160,12 @@ public class PreguntasCivil extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void seleccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seleccionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_seleccionActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        PreguntasInicio preguntas1 = new PreguntasInicio();
+        this.setVisible(false);
+        preguntas1.setLocationRelativeTo(null);
+        preguntas1.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -193,6 +205,7 @@ public class PreguntasCivil extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea areaT;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

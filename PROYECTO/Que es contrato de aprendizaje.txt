@@ -1,0 +1,11 @@
+$
+Es un contrato especial para vincular estudiantes que requieran hacer prácticas
+$
+relacionadas con su tema de estudio. Este permite a las empresas y empleadores
+$
+contratar estudiantes del SENA, de universidades u otros institutos educativos 
+$
+para que realicen su etapa práctica de formación y como remuneración reciben un apoyo económico  
+$
+con la particularidad de no constituir salario.
+$

@@ -7,6 +7,7 @@ package GUI.Usuario;
 
 import BussinesLogic.ConsultorioJ;
 import GUI.Inicial.EscojerInicioDeSesion;
+import GUI.Inicial.PaginaPrincipal;
 import data.Usuarios.Cliente.Cliente;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -15,12 +16,12 @@ import javax.swing.JOptionPane;
  *
  * @author mauri
  */
-public class LoginUsuario extends javax.swing.JFrame {
+public class LoginUsuarioRegistro extends javax.swing.JFrame {
 
     /**
      * Creates new form Inicio
      */
-    public LoginUsuario() {
+    public LoginUsuarioRegistro() {
         initComponents();
         setLocationRelativeTo(null);
     }
@@ -53,7 +54,7 @@ public class LoginUsuario extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Regresar al menu anterior");
+        jButton1.setText("Regresar al menu de inicio");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -135,7 +136,7 @@ public class LoginUsuario extends javax.swing.JFrame {
                 int respuestaErronea = JOptionPane.showOptionDialog(this,"Número de documento de identidad no encontrado "+ idIngreso.getText(),"Ingreso fallido",JOptionPane.YES_NO_CANCEL_OPTION,JOptionPane.ERROR_MESSAGE,null,Confirmacion,Confirmacion[0]);
                     if (respuestaErronea == 0){
                         this.setVisible(false);
-                        LoginUsuario reintento = new LoginUsuario();
+                        LoginUsuarioRegistro reintento = new LoginUsuarioRegistro();
                         reintento.setLocationRelativeTo(null);
                         reintento.setVisible(true);
                     }
@@ -143,7 +144,7 @@ public class LoginUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_botonDeIngresoActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        EscojerInicioDeSesion multiLogin = new EscojerInicioDeSesion();
+        PaginaPrincipal multiLogin = new PaginaPrincipal();
         this.setVisible(false);
         multiLogin.setLocationRelativeTo(null);
         multiLogin.setVisible(true);
@@ -163,21 +164,23 @@ public class LoginUsuario extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LoginUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginUsuarioRegistro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LoginUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginUsuarioRegistro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LoginUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginUsuarioRegistro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LoginUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginUsuarioRegistro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new LoginUsuario().setVisible(true);
+                new LoginUsuarioRegistro().setVisible(true);
             }
         });
     }

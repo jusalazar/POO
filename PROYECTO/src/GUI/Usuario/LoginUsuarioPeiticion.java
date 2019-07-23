@@ -7,6 +7,7 @@ package GUI.Usuario;
 
 import BussinesLogic.ConsultorioJ;
 import GUI.Inicial.EscojerInicioDeSesion;
+import GUI.Inicial.PaginaPrincipal;
 import data.Usuarios.Cliente.Cliente;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -15,12 +16,12 @@ import javax.swing.JOptionPane;
  *
  * @author mauri
  */
-public class LoginUsuario extends javax.swing.JFrame {
+public class LoginUsuarioPeiticion extends javax.swing.JFrame {
 
     /**
      * Creates new form Inicio
      */
-    public LoginUsuario() {
+    public LoginUsuarioPeiticion() {
         initComponents();
         setLocationRelativeTo(null);
     }
@@ -135,7 +136,7 @@ public class LoginUsuario extends javax.swing.JFrame {
                 int respuestaErronea = JOptionPane.showOptionDialog(this,"Número de documento de identidad no encontrado "+ idIngreso.getText(),"Ingreso fallido",JOptionPane.YES_NO_CANCEL_OPTION,JOptionPane.ERROR_MESSAGE,null,Confirmacion,Confirmacion[0]);
                     if (respuestaErronea == 0){
                         this.setVisible(false);
-                        LoginUsuario reintento = new LoginUsuario();
+                        LoginUsuarioPeiticion reintento = new LoginUsuarioPeiticion();
                         reintento.setLocationRelativeTo(null);
                         reintento.setVisible(true);
                     }
@@ -143,10 +144,24 @@ public class LoginUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_botonDeIngresoActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        EscojerInicioDeSesion multiLogin = new EscojerInicioDeSesion();
+         String [] TipoUsuario = {"Nuevo","Antiguo","Regresar al inicio"};
         this.setVisible(false);
-        multiLogin.setLocationRelativeTo(null);
-        multiLogin.setVisible(true);
+        int respuesta = JOptionPane.showOptionDialog(this,"Escoje tu tipo de usuario","Tipo de usuario",JOptionPane.YES_NO_CANCEL_OPTION,JOptionPane.QUESTION_MESSAGE,null,TipoUsuario,TipoUsuario[0]);
+        if (respuesta == 0){
+            Registro1 UsuarioNuevo = new Registro1();
+            UsuarioNuevo.setVisible(true);
+            this.setVisible(false);
+        }
+        if (respuesta == 1){
+            this.setVisible(false);
+            LoginUsuarioPeiticion UsuarioAntiguo = new LoginUsuarioPeiticion();
+            UsuarioAntiguo.setVisible(true);   
+        }
+        if (respuesta == 2){
+            PaginaPrincipal regreso = new PaginaPrincipal();
+            regreso.setVisible(true);
+            this.setVisible(false);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     public static void main(String args[]) {
@@ -163,21 +178,23 @@ public class LoginUsuario extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LoginUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginUsuarioPeiticion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LoginUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginUsuarioPeiticion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LoginUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginUsuarioPeiticion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LoginUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginUsuarioPeiticion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new LoginUsuario().setVisible(true);
+                new LoginUsuarioPeiticion().setVisible(true);
             }
         });
     }

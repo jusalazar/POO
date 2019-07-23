@@ -73,9 +73,9 @@
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="220" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="232" max="-2" attributes="0"/>
                   <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                   <Component id="jButton2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -90,14 +90,14 @@
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="seleccion" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton2" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                   <Component id="jScrollPane1" pref="284" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -132,30 +132,38 @@
         <Component class="javax.swing.JComboBox" name="seleccion">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="23">
-                <StringItem index="0" value="&#xbf;Como cobrar una letra de cambio?"/>
-                <StringItem index="1" value="&#xbf;Como limpiar registro de datacredito?"/>
-                <StringItem index="2" value="&#xbf;Como me puedo acoger a la ley de insolvencia?"/>
-                <StringItem index="3" value="&#xbf;Como puede darse por terminado un contrato de arriendo de vivienda urbana?"/>
-                <StringItem index="4" value="&#xbf;Como se levanta una hipoteca?"/>
-                <StringItem index="5" value="&#xbf;Cuanto dura el contrato de arrendamiento de vivienda urbana?"/>
-                <StringItem index="6" value="&#xbf;El contrato de arrendamiento de vivienda urbana puede ser verbal?"/>
-                <StringItem index="7" value="&#xbf;Sistema Integrado de Informacion sobre Multas y sanciones por Infracciones de Transito SIMIT es parecido a datacredito?"/>
-                <StringItem index="8" value="&#xbf;Es posible llegar a un acuerdo de pago con datacredito?"/>
-                <StringItem index="9" value="&#xbf;La promesa de compraventa deriva posesion o en tenencia?"/>
-                <StringItem index="10" value="&#xbf;Me pueden embargar mi salario si soy codeudor de una persona?"/>
-                <StringItem index="11" value="&#xbf;Para qu&#xe9; se hace un contrato de promesa de compraventa?"/>
-                <StringItem index="12" value="&#xbf;Que es un arrendamiento de vivienda Urbana?"/>
-                <StringItem index="13" value="&#xbf;Que garantias se pueden constituir en  un contrato de arrendamiento?"/>
-                <StringItem index="14" value="&#xbf;Que hacer cuando se incumple un contrato de promesa de compraventa?"/>
-                <StringItem index="15" value="&#xbf;Que obligaciones tiene el arrendador?"/>
-                <StringItem index="16" value="&#xbf;Que obligaciones tiene el arrendatario?"/>
-                <StringItem index="17" value="&#xbf;Que puedo hacer para proteger un bien inmueble?"/>
-                <StringItem index="18" value="&#xbf;Que requisitos se necesita para poder hacer un contraato de promesa de compraventa?"/>
-                <StringItem index="19" value="&#xbf;Que son las Garant&#xed;as?"/>
-                <StringItem index="20" value="&#xbf;Se puede embargar la pension para el pago de deudas?"/>
-                <StringItem index="21" value="&#xbf;Se puede negociar una deuda de administracion en propiedad horizontal?"/>
-                <StringItem index="22" value="&#xbf;Se puede subarrendar o ceder el inmueble objeto del contrato de arrendamiento de vivienda urbana?"/>
+              <StringArray count="31">
+                <StringItem index="0" value="&#xbf;Como saber si existe un contrato laboral?"/>
+                <StringItem index="1" value="&#xbf;Como se levanta una hipoteca?"/>
+                <StringItem index="2" value="&#xbf;Como se liquida la segudidad social de los contratistas?"/>
+                <StringItem index="3" value="&#xbf;Como se puede conciliar ante el ministerio del trabajo por despido sin justa causa?"/>
+                <StringItem index="4" value="&#xbf;Como se puede dar por terminado un contrato Laboral?"/>
+                <StringItem index="5" value="&#xbf;Cual es la duracion maxima de un contrato de aprendizaje?"/>
+                <StringItem index="6" value="&#xbf;Cuales son los requisitos para contratar a una empleada de servicios generales?"/>
+                <StringItem index="7" value="&#xbf;Cuanto dura el periodo de pruebas?"/>
+                <StringItem index="8" value="&#xbf;Cuanto puede equivaler la cuota alimentaria?"/>
+                <StringItem index="9" value="&#xbf;El aprendiz debe ser afiliado a seguridad social?"/>
+                <StringItem index="10" value="&#xbf;El aprendiz tiene derecho a prestaciones sociales?"/>
+                <StringItem index="11" value="&#xbf;El contrato de aprendizaje permite licencia de maternidad?"/>
+                <StringItem index="12" value="&#xbf;Es posible firmar un segundo contrato laboral a termino indefinido con otra empresa?"/>
+                <StringItem index="13" value="&#xbf;Hay alguna norma que regule el horario de uso de apps de mensajeria, hay pagos de horas extras por la tarea solicitada a traves de ese medio?"/>
+                <StringItem index="14" value="&#xbf;Para qu&#xe9; se hace un contrato de promesa de compraventa?"/>
+                <StringItem index="15" value="&#xbf;Puede haber acoso laboral en el marco de un contrato de prestaci&#xf3;n de servicio?"/>
+                <StringItem index="16" value="&#xbf;Puede un contrato de prestaci&#xf3;n de servicios generar una vinculacion laboral?"/>
+                <StringItem index="17" value="&#xbf;Que es contrato de aprendizaje?"/>
+                <StringItem index="18" value="&#xbf;Que es el periodo de pruebas en el contrato de trabajo?"/>
+                <StringItem index="19" value="&#xbf;Que es la estabilidad laboral reforzada?"/>
+                <StringItem index="20" value="&#xbf;Que es un contrato laboral?"/>
+                <StringItem index="21" value="&#xbf;Que formas de contrato laboral hay segun su duracion?"/>
+                <StringItem index="22" value="&#xbf;Que hacer si no pagan la segudidad social ni las prestaciones?"/>
+                <StringItem index="23" value="&#xbf;Que se puede hacer si una empresa no quiere contratar aprendices?"/>
+                <StringItem index="24" value="&#xbf;Quienes pueden contratar aprendices?"/>
+                <StringItem index="25" value="&#xbf;Quienes pueden ser contratados como aprendices?"/>
+                <StringItem index="26" value="&#xbf;Se esta obligado a asistir a reuniones o cultos religiosos por mandato del empleador?"/>
+                <StringItem index="27" value="&#xbf;Se le paga salario a un aprendiz?"/>
+                <StringItem index="28" value="&#xbf;Se pagan prestaciones durante el periodo de pruebas?"/>
+                <StringItem index="29" value="&#xbf;Se puede renovar el contrato de aprendizaje?"/>
+                <StringItem index="30" value="&#xbf;Si nunca se ha cotizado, se tiene derecho a reclamar una pension de vejez?"/>
               </StringArray>
             </Property>
           </Properties>

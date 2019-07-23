@@ -6,8 +6,11 @@
 package GUI.Inicial;
 
 
+import GUI.PreguntasFrecuentes.PreguntasInicio;
 import GUI.Usuario.LoginUsuario;
+import GUI.Usuario.LoginUsuarioPeiticion;
 import GUI.Usuario.Registro1;
+import GUI.Usuario.RegistroMenuPrin;
 import javax.swing.JOptionPane;
 
 /**
@@ -41,6 +44,7 @@ public class PaginaPrincipal extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("INICIO");
@@ -53,6 +57,11 @@ public class PaginaPrincipal extends javax.swing.JFrame {
 
         jButton1.setText("Preguntas frecuentes");
         jButton1.setPreferredSize(new java.awt.Dimension(197, 23));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Presentar solicitud");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -68,10 +77,18 @@ public class PaginaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jButton4.setText("Registrar Usuario");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
         jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jButton3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(jButton4, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
@@ -84,7 +101,8 @@ public class PaginaPrincipal extends javax.swing.JFrame {
                         .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jDesktopPane1Layout.createSequentialGroup()
                         .addGap(19, 19, 19)
                         .addComponent(jLabel1)))
@@ -101,6 +119,8 @@ public class PaginaPrincipal extends javax.swing.JFrame {
                 .addComponent(jButton3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -115,8 +135,8 @@ public class PaginaPrincipal extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jDesktopPane1)
-                .addGap(0, 0, 0))
+                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -133,9 +153,9 @@ public class PaginaPrincipal extends javax.swing.JFrame {
             this.setVisible(false);
         }
         if (respuesta == 1){
-            LoginUsuario UsuarioAntiguo = new LoginUsuario();
-            UsuarioAntiguo.setVisible(true);
-            this.setVisible(false);    
+            this.setVisible(false);
+            LoginUsuarioPeiticion UsuarioAntiguo = new LoginUsuarioPeiticion();
+            UsuarioAntiguo.setVisible(true);   
         }
         if (respuesta == 2){
             PaginaPrincipal regreso = new PaginaPrincipal();
@@ -150,6 +170,19 @@ public class PaginaPrincipal extends javax.swing.JFrame {
         multiLogin.setLocationRelativeTo(null);
         multiLogin.setVisible(true);       
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        PreguntasInicio preguntas1 = new PreguntasInicio();
+        this.setVisible(false);
+        preguntas1.setLocationRelativeTo(null);
+        preguntas1.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+            RegistroMenuPrin UsuarioNuevo = new RegistroMenuPrin();
+            UsuarioNuevo.setVisible(true);
+            this.setVisible(false);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -190,6 +223,7 @@ public class PaginaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
