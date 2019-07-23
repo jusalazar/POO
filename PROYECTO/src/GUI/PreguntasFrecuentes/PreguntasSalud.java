@@ -11,12 +11,12 @@ import static BussinesLogic.ConsultorioJ.InterpreteArchivosPreguntas;
  *
  * @author mauri
  */
-public class PreguntasCivil extends javax.swing.JFrame {
+public class PreguntasSalud extends javax.swing.JFrame {
 
     /**
      * Creates new form PreguntasCivil
      */
-    public PreguntasCivil() {
+    public PreguntasSalud() {
         initComponents();
     }
 
@@ -52,7 +52,7 @@ public class PreguntasCivil extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 
-        seleccion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "¿Como cobrar una letra de cambio?", "¿Como limpiar registro de datacredito?", "¿Como me puedo acoger a la ley de insolvencia?", "¿Como puede darse por terminado un contrato de arriendo de vivienda urbana?", "¿Como se levanta una hipoteca?", "¿Cuanto dura el contrato de arrendamiento de vivienda urbana?", "¿El contrato de arrendamiento de vivienda urbana puede ser verbal?", "¿Sistema Integrado de Informacion sobre Multas y sanciones por Infracciones de Transito SIMIT es parecido a datacredito?", "¿Es posible llegar a un acuerdo de pago con datacredito?", "¿La promesa de compraventa deriva posesion o en tenencia?", "¿Me pueden embargar mi salario si soy codeudor de una persona?", "¿Para qué se hace un contrato de promesa de compraventa?", "¿Que es un arrendamiento de vivienda Urbana?", "¿Que garantias se pueden constituir en  un contrato de arrendamiento?", "¿Que hacer cuando se incumple un contrato de promesa de compraventa?", "¿Que obligaciones tiene el arrendador?", "¿Que obligaciones tiene el arrendatario?", "¿Que puedo hacer para proteger un bien inmueble?", "¿Que requisitos se necesita para poder hacer un contraato de promesa de compraventa?", "¿Que son las Garantías?", "¿Se puede embargar la pension para el pago de deudas?", "¿Se puede negociar una deuda de administracion en propiedad horizontal?", "¿Se puede subarrendar o ceder el inmueble objeto del contrato de arrendamiento de vivienda urbana?" }));
+        seleccion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "¿Cuales son los servicios que tiene derecho el usuario?", "¿El derecho a la salud es un derecho fundamental?", "¿Existen los medicamentos POS?", "¿Que  regimenes garantizan el disfrute del derecho a la salud?", "¿Que derechos tengo como usuario?", "¿Que es el regimen contributivo?", "¿Que es el Regimen Subsidiado?", "¿Que es la atencion directa en hospitales?", "¿Quienes tienen derecho a pertenecer al Regimen Contributivo?", "¿Quienes tienen derecho a pertenecer al Regimen Subsidiado?", "¿Quienes tienes derecho a los beneficios de la subcuenta ECAT?", "¿Se puede presentar tutela contra una EPS?" }));
         seleccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 seleccionActionPerformed(evt);
@@ -148,7 +148,6 @@ public class PreguntasCivil extends javax.swing.JFrame {
         String direccion = DireccionCorrecta + ".txt" ;
         String texto = InterpreteArchivosPreguntas(direccion);
         areaT.setText(texto);
-        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void seleccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seleccionActionPerformed
@@ -172,20 +171,21 @@ public class PreguntasCivil extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PreguntasCivil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PreguntasSalud.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PreguntasCivil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PreguntasSalud.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PreguntasCivil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PreguntasSalud.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PreguntasCivil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PreguntasSalud.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PreguntasCivil().setVisible(true);
+                new PreguntasSalud().setVisible(true);
             }
         });
     }
